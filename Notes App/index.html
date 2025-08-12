@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- full container access Starts  -->
+
+        <div class="nav-container">
+
+            <!-- nav-header section starts  -->
+
+            <nav>
+                <span class="notes"><i class="fa-solid fa-book-open"></i>&nbsp;Notes</span>
+
+                <ul class="nav-header">
+                    <a href="" class="list-item">
+                        <li id="close">Close<i class="fa-solid fa-xmark"></i></li>
+                    </a>
+                </ul>
+            </nav>
+
+            <!-- nav-header section Ends  -->
+
+
+
+            <!-- content section Starts  -->
+
+            <div class="content-container">
+
+                <div class="content">
+                    <h2>Notes</h2>
+                    <hr>
+                    <p>Date</p>
+                    <p>Your Content</p>
+                    <button onclick="del(this)">Delete</button>
+                </div>
+
+                <button id="btnplus">+</button>.
+
+            </div>
+
+            <!-- content section Ends  -->
+
+
+
+            <!-- popup background access  starts-->
+
+            <div class="popup-overflow"></div>
+
+            <!-- popup background access  Ends-->
+
+
+
+            <!-- popup box show access Starts  -->
+
+            <div class="popup-main-container">
+
+                <div class="popup-box">
+
+                    <div class="nav-pop">
+                        <h2>Save&nbsp;&nbsp;Notes Here</h2>
+                    </div>
+
+                    <div class="nav-pop-content">
+
+                        <div>
+
+                            <form class="nav-input" id="noteForm">
+                                <input type="text" id="tittle" placeholder="Headings" class="Headings" required>
+                                <input type="date" id="date" placeholder="Date" style="color: #fff;" required>
+                                <input type="text" id="contents-inside" placeholder="Contents" required>
+
+                                <div>
+                                    <button type="submit" id="add-new" class="fixed-btn">Add</button>
+                                    <button type="button" id="delete-one" class="fixed-btn">Close</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- popup box show access Ends  -->
+
+        </div>
+
+        <!-- full container access Ends  -->
+
+    </div>
+
+
+    <!-- script link references  -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

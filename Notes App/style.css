@@ -1,0 +1,303 @@
+/* ------------------------------------------ */
+/*            Font Instaliation               */
+/* ------------------------------------------ */
+
+.libertinus-sans-regular {
+    font-family: "Libertinus Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.libertinus-sans-bold {
+    font-family: "Libertinus Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.libertinus-sans-regular-italic {
+    font-family: "Libertinus Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ------------------------------------------ */
+/*             Main container                 */
+/* ------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5c5c5c;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------ */
+/*             Nav Container                  */
+/* ------------------------------------------ */
+
+
+
+/* ------------------------------------------ */
+/*               Nav Header                   */
+/* ------------------------------------------ */
+
+nav {
+    width: 100%;
+    padding: 20px;
+    background-color: #d44e00;
+    display: flex;
+    align-items: center;
+}
+
+.notes {
+    display: flex;
+    font-size: 29px;
+    color: white;
+    font-weight: 900;
+    font-family: Verdana, 'Pacifico';
+}
+
+.nav-header {
+    display: flex;
+    margin-left: auto;
+    gap: 25px;
+}
+
+.list-item {
+    color: white;
+    font-weight: 700;
+    display: flex;
+}
+
+.list-item i {
+    color: red;
+}
+
+/*   */
+
+
+/* ------------------------------------------ */
+/*           content container                */
+/* ------------------------------------------ */
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.content {
+    margin: 40px;
+    background-color: black;
+    width: 25%;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #d44e00;
+}
+
+.content h2 {
+    padding: 10px;
+}
+
+.content p {
+    padding: 10px;
+}
+
+.content button {
+    color: white;
+    background-color: #d44e00;
+    border-radius: 15px;
+    padding: 10px;
+    width: 30%;
+    font-weight: 600;
+}
+
+#btnplus {
+    background-color: #d44e00;
+    color: #fff;
+    border-radius: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 40px;
+    border: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* ------------------------------------------ */
+/*           popup up container               */
+/* ------------------------------------------ */
+
+.popup-overflow {
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.popup-main-container {
+    position: fixed;
+    top: 58%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box {
+    background-color: #d44e00;
+    width: 40%;
+    padding: 40px;
+    border-radius: 12px;
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    z-index: 2;
+    display: flex;
+}
+
+.nav-pop {
+    border-right: 1px solid #fff;
+    padding: 15px;
+    color: white;
+    font-family: Georgia, Raleway, Tahoma, Roboto, Courier;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-pop-content {
+    padding: 20px;
+}
+
+.nav-input input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 2px solid #a3a3a3;
+}
+
+.Headings {
+    font-size: 19px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.nav-input input::placeholder {
+    color: #fff;
+}
+
+
+/* pop up button access  */
+
+
+.fixed-btn {
+    background: white;
+    color: black;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.fixed-btn:hover {
+    background: #f0f0f0;
+}
+
+
+
+/* ------------------------------------------ */
+/*          media query container             */
+/* ------------------------------------------ */
+
+@media (max-width: 400px) {
+
+    .content{
+        width: 100%;
+        margin: 10px;
+    }
+    .content-container{
+        gap: 0;
+    }
+
+    /* Center the popup on screen */
+    .popup-main-container {
+        position: fixed;
+        top: 55%;
+        left: 25%;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Adjust popup box size */
+    .popup-box {
+        background-color: #d44e00;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Heading style */
+    .nav-pop h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Inputs full width */
+    .nav-input input {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Stack buttons with space */
+    .nav-input div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Full-width buttons */
+    .fixed-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
